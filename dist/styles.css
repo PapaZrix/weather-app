@@ -1,0 +1,130 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-header: #1e293b;
+    --bg-btn-text: #ea580c;
+    --bg-main: #e5ebeb;
+    --box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 30%);
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+input, button {
+    font-family: inherit;
+}
+
+/* -------------- HEADER -------------- */
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--bg-header);
+    color: white;
+    position: relative;
+}
+
+.logo {
+    padding: 1rem;
+}
+
+.logo img {
+    max-width: 110px;
+}
+
+.form-div {
+    padding: 0.5rem;
+}
+
+.form-div input, .form-div button, 
+.degrees button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    margin-top: 10px;
+}
+
+.form-div input {
+    width: 400px;
+    margin-left: 20px;
+    border-radius: 5px 0 0 5px;
+}
+
+.form-div button {
+    margin-left: -5px;
+    background-color: var(--bg-btn-text);
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    /* transition: filter 0.3 ease-in-out; */
+}
+
+.degrees {
+    position: absolute;
+    right: 30px;
+}
+
+.degrees button {
+    width: 250px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-div button:hover {
+    filter: brightness(1.2);
+}
+
+.degrees button:hover {
+    background-color: var(--bg-main);
+}
+
+/* ------------ MEDIA QUERIES ------------ */
+
+@media (max-width: 650px) {
+    header {
+        justify-content: space-around;
+        gap: 10px;
+    }
+    
+    .form-div {
+        padding: 0;
+        margin-left: -15px;
+    }
+
+    form {
+        display: flex;
+    }
+
+    .form-div input {
+        width: 100px;
+        margin-left: 0;
+    }
+
+    .form-div button {
+        margin-left: 0;
+    }
+
+    .degrees {
+        position: relative;
+        right: 0;
+    }
+
+    .degrees button {
+        width: 60px;
+    }
+}
