@@ -155,10 +155,7 @@ main {
 /* ------------ FOOTER ------------- */
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    height: 82px;
     background-color: var(--bg-header);
     padding: 1rem;
     color: white;
@@ -242,7 +239,7 @@ footer a:hover {
     /* --------- MAIN ---------- */
 
     main {
-        height: calc(100vh - 113.95px - 70px);
+        /* height: calc(100vh - 113.95px - 82px); */
     }
 
     .container {
