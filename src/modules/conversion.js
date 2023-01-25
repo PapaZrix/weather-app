@@ -24,6 +24,7 @@ const tempConversion = (() => {
     const convertUnits = (temp) => {
         const switchBtn = document.querySelector('.switch')
 
+        // Depending on which symbol is bolded in the DOM convert to the other one
         if (switchBtn.childNodes[0].classList.contains('active')) {
             return 1.8 * Number(temp) + 32
         } else if (switchBtn.childNodes[2].classList.contains('active')) {

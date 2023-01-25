@@ -5,6 +5,7 @@ const UI = (() => {
         const container = document.querySelector('.container')
         container.innerHTML = ''
 
+        // the weatherData argument will be an object that we get when fetching the data from the API => so we use the property names that we assigned in getWeather module
         container.innerHTML += `
         <div class="top">
             <div class="left">
