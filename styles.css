@@ -236,6 +236,35 @@ footer a:hover {
 
     /* --------- MAIN ---------- */
 
+    main {
+        height: calc(100vh - 113.95px - 70px);
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .container > .top {
+        flex-direction: column;
+        gap: 10px
+    }
+
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    .left p, .middle p {
+        font-size: 1.5rem;
+    }
+
+    .container > .bottom {
+        padding: 0;
+        justify-content: space-evenly;
+        font-size: 1rem;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
     .mobile {
         display: block;
     }
@@ -248,5 +277,6 @@ footer a:hover {
 
     footer {
         font-size: 1rem;
+        gap: 5px;
     }
 }
