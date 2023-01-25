@@ -1,5 +1,5 @@
 const getWeather = (() => {
-    const convertData = (data) => {
+    function convertData(data) {
         const {
             name: city,
             sys: { country },
@@ -17,10 +17,11 @@ const getWeather = (() => {
             if (!response.ok) {
                 throw new Error(`City ${city} not found`)
             }
-            const data = convertData(response.json())
+            const data = convertData(await response.json())
             return data
         } catch(error) {
-            alert(error)
+            // alert(error)
+            console.log(error)
             return
         }
     }
