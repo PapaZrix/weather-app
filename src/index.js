@@ -6,3 +6,16 @@ document.addEventListener('DOMContentLoaded', async() => {
     UI.setWeather(weatherData)
 })
 
+const form = document.querySelector('form')
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+})
+
+const searchBtn = document.querySelector('.search-btn')
+searchBtn.addEventListener('click', async() => {
+    const input = document.querySelector('input').value
+    if (input === '') return
+    const weatherData = await getWeather.getData(input)
+    UI.setWeather(weatherData)
+    form.reset() 
+})
