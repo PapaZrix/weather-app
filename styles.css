@@ -75,7 +75,7 @@ header {
 }
 
 .degrees button {
-    width: 250px;
+    width: 200px;
     cursor: pointer;
     background-color: white;
     border-radius: 5px;
@@ -93,9 +93,115 @@ header {
     background-color: var(--bg-main);
 }
 
+/* ------------ MAIN ---------------- */
+
+main {
+    height: calc(100vh - 113.95px - 82px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-main);
+}
+
+.container {
+    width: 730px;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.container > .top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.container h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+.left, .right {
+    font-size: 1.5rem;
+}
+
+.mobile {
+    display: none;
+}
+
+.container > .bottom {
+    padding: 2rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.info > p:first-child {
+    margin-bottom: 0.5rem;
+    color: var(--bg-btn-text);
+}
+
+/* ------------ FOOTER ------------- */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-header);
+    padding: 1rem;
+    color: white;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--bg-btn-text);
+    cursor: pointer;
+    transition: filter 0.3 ease-in-out;
+}
+
+footer > .shoutout {
+    text-align: center;
+}
+
+footer > .made-by {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+} 
+
+footer > .made-by a {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+footer svg {
+    max-width: 20px;
+}
+
+footer a:hover {
+    filter: brightness(1.6);
+}
+
+
 /* ------------ MEDIA QUERIES ------------ */
 
 @media (max-width: 650px) {
+
+    /* --------- HEADER --------- */
+
     header {
         justify-content: space-around;
         gap: 10px;
@@ -126,5 +232,21 @@ header {
 
     .degrees button {
         width: 60px;
+    }
+
+    /* --------- MAIN ---------- */
+
+    .mobile {
+        display: block;
+    }
+
+    .non-mobile {
+        display: none;
+    }
+
+    /* -------- FOOTER ---------- */
+
+    footer {
+        font-size: 1rem;
     }
 }
