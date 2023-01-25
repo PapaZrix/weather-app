@@ -86,6 +86,10 @@ header {
     gap: 5px;
 }
 
+.degrees button > .active {
+    font-weight: bolder;
+}
+
 .form-div button:hover {
     filter: brightness(1.2);
 }
